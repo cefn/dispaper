@@ -5,7 +5,7 @@ OutlineEncoding=CP1252
 LeftMarging=1in
 TopMarging=1in
 Magnification=1
-PaperType=a4
+PaperType=letter
 Orientation=Landscape
 [Settings]
 DrawHyperLinkBorder=true
