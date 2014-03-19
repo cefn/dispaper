@@ -1,0 +1,17 @@
+This is 8-bit Big BibTeX version 0.99c
+Implementation:  GNU C for Unix
+Release version: 3.71 (18 Aug 1996)
+
+The top-level auxiliary file: sample.aux
+The style file: acm-sigchi.bst
+Database file #1: sample.bib
+Warning--to sort, need author or key in Acrobat7
+
+Here's how much of BibTeX's memory you used:
+ Cites:                 6 out of 7500
+ Fields:              104 out of 125000
+ Hash table:        34841 out of 35000
+ Strings:             562 out of 30000
+ String pool:        4638 out of 750000
+ Wizard functions:   2243 out of 10000
+(There was 1 warning)
