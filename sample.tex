@@ -23,6 +23,12 @@
         \affaddr{Authortown, PA 54321 USA}\\
         \email{author1@anotherco.com}
   }
+  \vspace{2em}
+  \begin{figure}
+  \centering
+  \includegraphics[width=250]{sample.jpg}
+  \end{figure}
+  \vspace{2em}
 }
 
 % Paper metadata (use plain text, for PDF inclusion and later re-using, if desired)
@@ -51,28 +57,46 @@
 \fontsize{8.5}{10}
 \begin{document}
 
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 \maketitle
-
-\marginpar{
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
-}
-
-\marginpar{
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
-}
 
 \begin{abstract}
 In the process of realising a product, choices must be made about its configuration. For a digitally-controlled product, its programmed behaviour, or firmware, is an element which will heavily influence user experience. We contrast three caricatures of practice, where preferred product configurations  are either \emph{discovered}, \emph{decided} or \emph{designed}. On this analysis, established practice for selecting programmed behaviour does not satisfy the criteria for being \emph{designed}. We examine what obstacles exist to applying design practices when selecting product behaviour, and propose a programme to identify artefacts and processes which can facilitate this work.
@@ -90,15 +114,55 @@ for help using the ACM Classification system.
 \terms{\plaingeneralterms}
 \textcolor{red}{Optional section to be included in your final version.}
 
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 
 % =============================================================================
 \section{Introduction}
 % =============================================================================
 
-Design, by Feng and Feenberg's [] broad, inclusive definition is "a process of consciously shaping an artifact to adapt it to specific goals and environments". 
-However, not all shaping practices adopt the same world-view. Within some practices, modelled on the scientific method, shaping choices are \emph{discovered}, by establishing facts, from which choices can be deduced. For example,  a material's objective physical properties can eliminate from consideration, or experimental results in human perception can recommend employing a particular visual cue for users. Within other practices there is a focus on mapping a space from which the preferred solution will be \emph{decided} by judging amongst them based on an implicit or explicit scheme of values and preference.
+A broad, inclusive definition of design, is offered by Feng and Feenberg [], "a process of consciously shaping an artifact to adapt it to specific goals and environments". 
+However, not all shaping practices adopt the same world-view. Some practices are modelled on the scientific method, and shaping choices are \emph{discovered}, by establishing facts, from which choices can be deduced. For example,  a material's physical properties can eliminate it from consideration, or experimental results in human perception can recommend employing a particular visual cue for users over an alternative. Within other practices there is a focus on mapping a space of solutions from which the preferred one will be \emph{decided} based on an implicit or explicit scheme of values and preference [].
 
-In this paper, we reserve the phrase \emph{designed} for preferences which come from reflective processes [Fallman][Brock and Craft]. These are neither \emph{discovered} through evidence gathering, nor \emph{decided} through systematic analysis of a space of configurations. Central to a reflective design process are the activities of sketching [] and bricolage [], through which the designer engages in a "conversation with materials" [Schon]. "As designers conceive of a new idea or refine the details of an existing idea, the materials they use begin to “talk back”" [Ozenc et al].
+In this paper, we reserve the phrase \emph{designed} for preferences which are arrived at through reflective processes [Schon] such as sketching [Brock and Craft] and bricolage [Levi-Strauss], building on design theorist's claims that sketching is "the archetypal activity of the design approach" [Fallman] and that "design in all its guises is a form of bricolage"[Louridas].
+
+In a reflective process, preferences are neither \emph{discovered} through evidence gathering, nor \emph{decided} through systematic analysis of a space of configurations. Instead, the designer engages in a "conversation with materials" [Schon] resonating  "As designers conceive of a new idea or refine the details of an existing idea, the materials they use begin to 'talk back'" [Ozenc et al] [Brock and Craft
 
 Co-design or design briefing
 
@@ -114,6 +178,45 @@ Informal and formal drawings are in use throughout the design process in fashion
 % =============================================================================
 Please use an 8.5-point Verdana font, or other sans serifs font as close as possible in appearance to Verdana in {Use footnotes sparingly, if at all.}
 As stated in the footnote, footnotes should rarely be used.
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 
 \subsection{Language, style, and content}
 % -----------------------------------------------------------------------------
@@ -172,6 +275,44 @@ Be sure to make images large enough so the important details are legible and cle
 Your document may use color figures, which are included in the page limit; the figures must be usable when printed in black and white.
 You can use the \LaTeX's \texttt{marginpar} command to insert figures in the (right) margin side of the document (see \autoref{fig:marginparsample}).
 
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 
 % =============================================================================
 \section{References and Citations}
@@ -212,6 +353,45 @@ This is widely available at no cost from~\cite{Acrobat7}.
 Note that most reviewers will use a North American/European version of Acrobat reader, which cannot handle documents containing non-North American or non-European fonts (e.g. Asian fonts).  
 Please therefore do not use Asian fonts, and verify this by testing with a North American/European Acrobat reader (obtainable as above). Something as minor as including a space or punctuation character in a two-byte font can render a file unreadable.
 
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{sample.jpg}
+  \caption{A marginal figure.}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 
 % =============================================================================
 \section{Dummy text}
