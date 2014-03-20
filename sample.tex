@@ -4,7 +4,7 @@
 % See http://personales.upv.es/luileito/chiext/
 
 %% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-\copyrightinfo{Copyright {2014} held by Cefn Hoile. Rights Licensed to ACM}
+\copyrightinfo{Copyright {2014} held by First Author. Rights Licensed to ACM}
 %% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
 
 \title{Firmware: The Missing Blueprint}
@@ -14,11 +14,18 @@
 % Actually, it's up to you to strictly adhere to this author notation.
 \author{
   \alignauthor{
-        \textbf{Cefn Hoile}\\
-        \affaddr{Highwire DTC}\\
-        \affaddr{Lancaster University}\\
-        \email{c.hoile@lancaster.ac.uk}
+        \textbf{First Author}\\
+        \affaddr{AuthorCo, Inc.}\\
+        \affaddr{123 Author Ave.}\\
+        \affaddr{Authortown, PA 54321 USA}\\
+        \email{author1@anotherco.com}
   }
+%  \alignauthor{
+%        \textbf{Cefn Hoile}\\
+%        \affaddr{Highwire DTC}\\
+%        \affaddr{Lancaster University}\\
+%        \email{c.hoile@lancaster.ac.uk}
+%  }
   \vspace{2em}
   \begin{figure}
   \centering
@@ -133,31 +140,6 @@ However, not all shaping practices adopt a designerly [] world-view. Some are cl
 
 So, how is designing distinct from discovering or decision-making? In this paper, we employ a definition of design, following Fallman[] and Louridas[], where the phrase \emph{designed} is reserved for artifact shaping which is arrived at through reflective processes [Schon]. \emph{Designed} preferences are neither \emph{discovered} through evidence gathering, nor \emph{decided} through systematic analysis of a space of configurations. Instead, a designer engages in a "conversation with materials" [Schon], a dynamic process in which "the materials [designers] use begin to 'talk back'". [Ozenc et al]
 
-Our position resonates strongly with Fallman's [], that sketching is "the archetypal activity of the design approach". However, if there are no candidate practices within firmware engineering which parallel \emph{sketching}, and if reflective techniques are central to value-creation in all design disciplines, we may ask whether product firmware is actually designed at all?
-
-This paper explores candidate materials to support reflective design within firmware engineering, considering approaches used within the field and comparing them to those from established design disciplines. We offer reasons why familiar approaches cannot be trivially transferred to firmware engineering. We then propose a number of candidates for reflective materials which may be used effectively in firmware design and describe a programme of experimentation to discover how those tools and approaches may sustain the co-design of product firmware.
-
-% =============================================================================
-\section{Sketching, Immateriality, Processuality}
-% =============================================================================
-
-Designers rely on sketching because it “supports cognition in ways that lead to creativity”, including “re-interpretive cycles of idea generation”. \cite{Craft}, rough out ideas”, then “critique what they have done", using it as a mechanism of reflection \cite{Ozenc}.  
-
-Familiar techniques allow graphic artifacts or physical products to be represented but capturing product \emph{firmware} on the page of a sketchbook presents problems, since it is both immaterial \cite{Ozenc} and processual \cite{Bratteteig}. Since firmware is immaterial, there is no trivial two-dimensional projection of its code which a designer can be expected to author or interpret. Since it is processual, product behaviour is by nature determined by circumstance and history, meaning that any static representations deliver only a partial view of the design. 
-
-However when designing interactive systems, "a designer has not had enough feedback to know if this is the design they want” \cite{Ozenc}. 
-
-Sketches also act as a record of the many alternatives considered, and facilitate sharing to establish collaboration and consensus \cite{VanDerLugt}. 
-
-
-% =============================================================================
-\section{Firmware Engineering}
-% =============================================================================
-
-Reports on established practice suggests the early phases of behaviour design for digitally-controlled products are centred on representations primarily accessible to programmers  [Petre 2013]. Development begins with a software requirements document, and proceeds through software modelling constructs and program code until a single prototype implementation can be deployed [Ganssle 2000]. During these phases many choices are made which will impact on the interaction design embodied by the product. However, it is only after a working prototype is deployed that feedback is anticipated from end-users on the behaviour design choices already made [Punkka 2005, van der Helm 2008].
-
-By contrast with other design disciplines, this practice raises the concern that behaviour design decisions for digitally-controlled products could be made overwhelmingly by software engineers on behalf of users, exploring few alternatives, and in isolation from user design contributions (Norman 2006). Assuming that a prototype is needed to sustain engagement, user feedback is only possible late in the firmware design process and inherently centres around approving or critiquing a single behaviour design configuration. Critiques of firmware design [Norman 2002, 2010, Thimbleby 2007, Ganssle 2000) suggest that limitations of existing practice has a direct impact on the quality of products in the marketplace.
-
 \marginpar{
 \begin{figure}
   \begin{center}
@@ -168,44 +150,56 @@ By contrast with other design disciplines, this practice raises the concern that
 \end{figure}
 \vspace{1em}
 }
+Our position resonates strongly with Fallman's [], that sketching is "the archetypal activity of the design approach". However, if there are no candidate practices within firmware engineering which parallel \emph{sketching}, and if reflective techniques are central to value-creation in all design disciplines, we may ask whether product firmware is actually designed at all?
 
-Entrenched problems in the industry are illustrated well by Cateye’s SL110 Loop Orbit bikelights, (Amazon 2013) which prompted the following customer report "The back light turns off after 1 minute! I can not use the set when cycling at night as it is unsafe." A bike light unsuitable for use at night fails spectacularly to meet its design brief. The product manual reveals the secret - "Deactivate...“Try Me”...mode (by pressing and holding the light until it flashes quickly and shuts off)".
-
-% =============================================================================
-\section{Projection, Immateriality and Processuality}
-% =============================================================================
-
-
+This paper explores candidate materials to support reflective design within firmware engineering, considering approaches used within the field and comparing them to those from established design disciplines. We offer reasons why familiar approaches cannot be trivially transferred to firmware engineering. We then propose a number of candidates for reflective materials which may be used effectively in firmware design and describe a programme of experimentation to discover how those tools and approaches may sustain the co-design of product firmware.
 
 % =============================================================================
-\section{Blueprints, Patterns, Collaboration and Co-design}
+\section{Scope: Screenless Devices}
 % =============================================================================
 
-Many participants in a physical design process lack the skills needed to actually materialise the product. Nevertheless, sketches, blueprints and models can serve to catalyse knowledge exchange between a wide range of stakeholders, helping to integrate clients' experience of the market and users' experience of the domain from a very early stage in the design process of a physical product.
+Our work focuses on simple products with no operating system, graphical interface, or application marketplace, from flashing fairy lights through domestic appliances to digital radios. Selecting this domain excludes simplistic design approaches which consider rich interface design as an adequate proxy for interaction design, while leaving product behaviour underspecified as a gap to be filled arbitrarily later in the engineering process.
 
-Blueprints of physical designs capture implementation commitments, guiding and constraining a specialist production process. However, they also stimulate and facilitate engagement with others without demanding they themselves have the skills to materialise the design. By contrast, in a firmware design process, the representations which characterise implementation commitments for code are accessible principally to programmers - those skilled in materialising digital behaviours - and can not effectively catalyse knowledge exchange with others. By excluding key stakeholders until working systems are ready to be tested, this restricts the design contributions they can make, and limits the potential for design thinking. 
+Cateye’s SL110 Loop Orbit bikelights illustrate how a product design process which facilitates user engagement and reflective exploration is sorely needed in this segment. A typical purchaser reports "The back light turns off after 1 minute! I can not use the set when cycling at night as it is unsafe."  A bike light unsuitable for use at night fails spectacularly to meet its design brief, yet the small print of the product manual reveals the secret -  "Deactivate...“Try Me”...mode (by pressing and holding the light for 30 seconds until it flashes quickly and shuts off)".
 
-Blueprints delivery downstream
+% =============================================================================
+\section{Sketching, Immateriality, Processuality}
+% =============================================================================
 
-Multiplicity and Engagement
+Design disciplines such as architecture have mature techniques to engage end-users early in the design process, whilst stimulating and recording multiple alternative choices for downstream implementation. These techniques range from unstructured, informal practices such as sketching, brainstorming, and low-fidelity prototypes through to more formal structured practices such as method cards or blueprints. They help “design intent” to be communicated, and facilitate reflection (Schon 1992). The techniques act to surface, record and resolve concerns in design choices before significant investments are made fabricating prototypes or materialising the final design.
 
-Patterns engagement upstream
+Designers rely on sketching because it “supports cognition in ways that lead to creativity”, including “re-interpretive cycles of idea generation”. \cite{Craft}, rough out ideas”, then “critique what they have done", using it as a mechanism of reflection \cite{Ozenc}.
+
+Familiar techniques allow graphical artifacts or physical products to be represented and reflected upon. However, capturing the design of product \emph{firmware} on the page of a sketchbook presents problems, since it is both immaterial \cite{Ozenc} and processual \cite{Bratteteig}. Since it is immaterial there is no trivial two-dimensional projection of its code which a non-programmer can be expected to author or interpret. Since it is processual, by nature determined by circumstance and history, any static representations deliver only a partial view of the product behaviour. As a result, when attempting to design interactive systems through sketching, designers feel they have "not had enough feedback to know if this is the design they want” \cite{Ozenc}.
+
+% =============================================================================
+\section{Architecture versus Firmware Engineering}
+% =============================================================================
+
+Sketches and drawings perform other important functions in reflective design fields. They act as a record allowing designers and stakeholders to revisit the alternatives under consideration and facilitate sharing for collaboration and consensus \cite{VanDerLugt}. 
+
+Many participants in a physical design process, such as the design of a building, lack the skills needed to actually materialise the product. Formal drawings such as blueprints capture implementation commitments, guiding and constraining a specialist production process, but can also act as a \emph{boundary object} \cite{Star}, catalysing knowledge exchange between a wide range of stakeholders, helping to integrate clients' experience of the market and users' experience of the domain in the design process.
+
+Architects also pioneered the use of \emph{pattern languages} \cite{Alexander}both to describe a space of design possibilities, but just as importantly as a technique for brokering agreement with stakeholders about design alternatives.
+
+Through blueprints and pattern languages, early engagement with an architectural design can take place without either building the design or demanding that collaborators have the skills needed to materialise the design. 
+
+Although software engineering inherited the concept of \emph{patterns} from Alexander's architectural practice \cite{Gamma} the important intent,that patterns should sustain stakeholder engagement was lost in translation. The representations which characterise implementation are accessible principally to programmers \cite{Petre} - those skilled in materialising digital behaviours - and can not effectively catalyse knowledge exchange with others. By excluding key stakeholders until working systems are ready to be tested, this restricts the design contributions others can make. 
+
+Firmware development begins with a requirements document, and proceeds through modelling constructs and program code until a single prototype implementation can be deployed [Ganssle 2000]. During these phases many choices are made which will impact on user experience. However, it is only after a working prototype is deployed that feedback is anticipated from non-programmers on the behaviour design choices already made [Punkka 2005, van der Helm 2008]. This raises the concern that behaviour design decisions for digitally-controlled products could be made overwhelmingly by software engineers on behalf of users, exploring few alternatives, and in isolation from user design contributions (Norman 2006). Assuming that a prototype is needed to sustain engagement, user feedback is only possible late in the firmware design process and inherently centres around approving or critiquing a single behaviour design configuration. Critiques of firmware design [Norman 2002, 2010, Thimbleby 2007, Ganssle 2000) suggest that limitations of existing practice has a direct impact on the quality of products in the marketplace.
 
 % =============================================================================
 \section{Boundary Objects and Bricolage}
 % =============================================================================
 
-Design disciplines such as product design and architecture have mature techniques to engage end-users early in the design process, whilst stimulating and recording multiple alternative choices for downstream implementation (Cross 2006)(Eriksen 2008). These techniques range from unstructured, informal practices such as brainstorming (Gerber and Carroll 2012), (Cruickshank and Evans 2012) (van der Lugt 2002), sketching (Arvola and Artman 2007), (Craft and Cairns 2009), and low-fidelity prototypes (Muller 1999,Gerber and Carroll 2012, Rice et al 2012, Rhinow et al 2012) through to more formal structured practices such as method cards (Lockton et al 2010, Biskjaer et al 2010, Sangiorgi and Clark 2004) and blueprints (Nystrom 2007, Hansen et al 2012). These boundary objects (Star and Greisemer 1989) factor significantly in user-led design processes, helping “design intent” to be communicated, and facilitating reflection (Schon 1992). The techniques act to surface, record and resolve concerns in design choices before significant investments are made fabricating prototypes or materialising the final design. 
-
-
  and bricolage [Levi-Strauss], building on design theorist's claims that  [Fallman] and that "design in all its guises is a form of bricolage"[Louridas].
 
 
 % =============================================================================
-\section{Wizard of Oz and Visual Programming}
+\section{Candidate Materials}
 % =============================================================================
 
-
+Wizard of Oz and Visual Programming
 
 \marginpar{
 \begin{figure}
