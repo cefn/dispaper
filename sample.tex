@@ -18,15 +18,14 @@
 \author{
   \alignauthor{
         \textbf{Cefn Hoile}\\
-        \affaddr{AuthorCo, Inc.}\\
-        \affaddr{123 Author Ave.}\\
-        \affaddr{Authortown, PA 54321 USA}\\
-        \email{author1@anotherco.com}
+        \affaddr{Highwire DTC}\\
+        \affaddr{Lancaster University}\\
+        \email{c.hoile@lancaster.ac.uk}
   }
   \vspace{2em}
   \begin{figure}
   \centering
-  \includegraphics[width=250]{sample.jpg}
+  \includegraphics[width=220]{disciplines.png}
   \end{figure}
   \vspace{2em}
 }
@@ -60,50 +59,19 @@
 \marginpar{
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
+  \includegraphics[width=\marginparwidth]{blueprint_long.jpg}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
 }
 
-\marginpar{
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
-}
-
-\marginpar{
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
-}
-
-\marginpar{
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
-}
 \maketitle
 
 \begin{abstract}
-In the process of realising a product, choices must be made about its configuration. For a digitally-controlled product, its programmed behaviour, or firmware, is an element which will heavily influence user experience. We contrast three caricatures of practice, where preferred product configurations  are either \emph{discovered}, \emph{decided} or \emph{designed}. On this analysis, established practice for selecting programmed behaviour does not satisfy the criteria for being \emph{designed}. We examine what obstacles exist to applying design practices when selecting product behaviour, and propose a programme to identify artefacts and processes which can facilitate this work.
+In the process of realising a product, choices must be made about its configuration. For a digitally-controlled product, its programmed behaviour, or firmware, is an element which will heavily influence user experience. We contrast three caricatures of practice in  which product configurations either \emph{discovered}, \emph{decided} or \emph{designed}, and explore the role of  reflection, sketching and boundary objects as a foundation for the practice of design. On this analysis, established practice for selecting programmed behaviour does not satisfy the criteria for being \emph{designed}. We examine what obstacles exist to applying reflective practices when selecting the \emph{behaviour} of products, and we propose a programme to identify artefacts and processes which can facilitate this work.
 \end{abstract}
 
-\keywords{\plainkeywords}
-\textcolor{red}{Mandatory section to be included in your final version.}
+\keywords{Firmware, Microcontrollers, Product Design, Design Interactions, Sketching, Boundary Objects}
 
 \category{H.5.m}{Information interfaces and presentation (e.g., HCI)}{Miscellaneous}. 
 %See \cite{ACMCCS} 
@@ -133,15 +101,6 @@ for help using the ACM Classification system.
   \end{center}  
 \end{figure}
 }
-\marginpar{
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
-  \label{fig:marginparsample}
-  \end{center}  
-\end{figure}
-}
 
 \marginpar{
 \begin{figure}
@@ -152,15 +111,21 @@ for help using the ACM Classification system.
   \end{center}  
 \end{figure}
 }
+
 
 % =============================================================================
 \section{Introduction}
 % =============================================================================
 
-A broad, inclusive definition of design, is offered by Feng and Feenberg [], "a process of consciously shaping an artifact to adapt it to specific goals and environments". 
-However, not all shaping practices adopt the same world-view. Some practices are modelled on the scientific method, and shaping choices are \emph{discovered}, by establishing facts, from which choices can be deduced. For example,  a material's physical properties can eliminate it from consideration, or experimental results in human perception can recommend employing a particular visual cue for users over an alternative. Within other practices there is a focus on mapping a space of solutions from which the preferred one will be \emph{decided} based on an implicit or explicit scheme of values and preference [].
+An inclusive definition of design, offered by Feng and Feenberg [], is "a process of consciously shaping an artifact to adapt it to specific goals and environments". 
 
-In this paper, we reserve the phrase \emph{designed} for preferences which are arrived at through reflective processes [Schon] such as sketching [Brock and Craft] and bricolage [Levi-Strauss], building on design theorist's claims that sketching is "the archetypal activity of the design approach" [Fallman] and that "design in all its guises is a form of bricolage"[Louridas].
+However, not all shaping practices adopt the same world-view. Some practices are closer to a scientific method, where choices are \emph{discovered}, deducing them from facts. For example,  a material's physical properties can eliminate it from consideration, or experiments can recommend employing a particular approach over an alternative. Other practices map a space of solutions from which the preferred one will be \emph{decided} based on an explicit or implicit scheme of values and preference[]. 
+
+In this paper, we reserve the phrase \emph{designed} for preferences which are arrived at through reflective processes [Schon], a position which resonates with Fallman's claim that sketching is "the archetypal activity of the design approach". Given the way such reflective techniques are employed in other design disciplines, we speculate if there are, or could be, any kinds of practice which parallel sketching when selecting behaviours of a digitally controlled product.
+
+ such as sketching 
+
+[Brock and Craft] and bricolage [Levi-Strauss], building on design theorist's claims that  [Fallman] and that "design in all its guises is a form of bricolage"[Louridas].
 
 In a reflective process, preferences are neither \emph{discovered} through evidence gathering, nor \emph{decided} through systematic analysis of a space of configurations. Instead, the designer engages in a "conversation with materials" [Schon] resonating  "As designers conceive of a new idea or refine the details of an existing idea, the materials they use begin to 'talk back'" [Ozenc et al] [Brock and Craft
 
@@ -171,7 +136,7 @@ Architecture, blueprints and patterns.
 % =============================================================================
 \section{Sketches and Blueprints}
 % =============================================================================
-Informal and formal drawings are in use throughout the design process in fashion, architecture and product design, but no analog seems to exist for interactive behaviours. Sketches and blueprints of physical designs capture implementation commitments, guiding and constraining a specialist production process. However, they also stimulate and facilitate engagement with others without demanding they themselves have the skills to materialise the design. By contrast, in a firmware design process, the representations which characterise implementation commitments for code are accessible principally to programmers - those skilled in materialising digital behaviours - and can not effectively catalyse knowledge exchange with others. By excluding key stakeholders until working systems are ready to be tested, this restricts the design contributions they can make, and limits the potential for design thinking. In this paper, we explore behaviour blueprints as a design fiction and a rhetorical object. We outline the preferred features by analogy with effective tools from other disciplines, and we detail a program of future co-design experimentation which we hope will allow us to explore and validate candidate representations.
+Informal and formal drawings are in use throughout the design process in fashion, architecture and product design, but no analog seems to exist for interactive behaviours. Sketches and blueprints of physical designs capture implementation commitments, guiding and constraining a specialist production process. However, they also stimulate and facilitate engagement with others without demanding they themselves have the skills to materialise the design. By contrast, in a firmware design process, the3 representations which characterise implementation commitments for code are accessible principally to programmers - those skilled in materialising digital behaviours - and can not effectively catalyse knowledge exchange with others. By excluding key stakeholders until working systems are ready to be tested, this restricts the design contributions they can make, and limits the potential for design thinking. In this paper, we explore behaviour blueprints as a design fiction and a rhetorical object. We outline the preferred features by analogy with effective tools from other disciplines, and we detail a program of future co-design experimentation which we hope will allow us to explore and validate candidate representations.
 
 % =============================================================================
 \section{Boundary Objects and Bricolage}
@@ -405,8 +370,10 @@ Aliquam consectetur quam sed odio varius vitae rhoncus urna fermentum. Phasellus
 
 
 \section{Acknowledgements}
-We thank all DUX 2003 publications support and staff who wrote this document originally and allowed us to modify it for this conference.
-This template was based on Manas Tungare's \texttt{chi.cls}, and rewritten by Luis A. Leiva.
+NYU Dead Media Archive [Blueprint image]
+Creative Commons imagery [Flickr accounts]
+SarahMumOf3 for Xmas Light controller
+
 
 \section{References format}
 References must be the same font size as other body text.
