@@ -4,10 +4,7 @@
 % See http://personales.upv.es/luileito/chiext/
 
 %% EXAMPLE BEGIN -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
-% \copyrightinfo{Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. Copyrights for components of this work owned by others than ACM must be honored. Abstracting with credit is permitted. To copy otherwise, or republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Request permissions from permissions@acm.org. \\
-% {\emph{CHI'14}}, April 26--May 1, 2014, Toronto, Canada. \\
-% Copyright \copyright~2014 ACM ISBN/14/04...\$15.00. \\
-% DOI string from ACM form confirmation}
+\copyrightinfo{Copyright {2014} held by Cefn Hoile. Rights Licensed to ACM}
 %% EXAMPLE END -- HOW TO OVERRIDE THE DEFAULT COPYRIGHT STRIP -- (July 22, 2013 - Paul Baumann)
 
 \title{Firmware: The Missing Blueprint}
@@ -25,7 +22,7 @@
   \vspace{2em}
   \begin{figure}
   \centering
-  \includegraphics[width=270]{disciplines.jpg}
+  \includegraphics[width=260]{blueprint.jpg}
   \end{figure}
   \vspace{2em}
 }
@@ -60,37 +57,34 @@
 \marginpar{
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\marginparwidth]{blueprint_long.jpg}
+  \includegraphics[width=\marginparwidth]{bikelight.jpg}
+  \caption{Bicycle Light}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
+\vspace{1em}
 }
-
-\maketitle
-
-\begin{abstract}
-In the process of realising a product, choices must be made about its configuration. For a digitally-controlled product, its programmed behaviour, or firmware, is an element which will heavily influence user experience. We contrast three caricatures of practice in  which product configurations either \emph{discovered}, \emph{decided} or \emph{designed}, and explore the role of  reflection, sketching and boundary objects as a foundation for the practice of design. On this analysis, established practice for selecting programmed behaviour does not satisfy the criteria for being \emph{designed}. We examine what obstacles exist to applying reflective practices when selecting the \emph{behaviour} of products, and we propose a programme to identify artefacts and processes which can facilitate this work.
-\end{abstract}
-
-\keywords{Firmware, Microcontrollers, Product Design, Design Interactions, Sketching, Boundary Objects}
-
-\category{H.5.m}{Information interfaces and presentation (e.g., HCI)}{Miscellaneous}. 
-%See \cite{ACMCCS} 
-See: \url{http://www.acm.org/about/class/1998/} 
-for help using the ACM Classification system.
-\textcolor{red}{Mandatory section to be included in your final version.}
-
-\terms{\plaingeneralterms}
-\textcolor{red}{Optional section to be included in your final version.}
 
 \marginpar{
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{xmas.jpg}
-  \caption{Christmas Lights}
+  \caption{Flashing Tree Lights}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
+\vspace{1em}
+}
+
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{microwave.jpg}
+  \caption{Domestic Microwave}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+\vspace{1em}
 }
 
 \marginpar{
@@ -101,43 +95,99 @@ for help using the ACM Classification system.
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
+\vspace{1em}
 }
+
+\maketitle
+
+\begin{abstract}
+In the process of realising a product, choices must be made about its configuration. For a digitally-controlled product, its programmed behaviour, or firmware, is an element which heavily influences user experience. We contrast three caricatures of practice in  which product configurations are either \emph{discovered}, \emph{decided} or \emph{designed}, and explore the role of  reflection, sketching and boundary objects as a foundation for the practice of design in firmware engineering. On this analysis, established practice for selecting programmed behaviour does not satisfy the criteria for being \emph{designed}. We examine what obstacles exist to applying reflective practices when selecting the \emph{behaviour} of products, and we propose a programme to identify artefacts and processes which can facilitate this work.
+\end{abstract}
+
+\begin{comment}
+\vspace{1mm}
+\noindent
+{\bf Categories and Subject Descriptors:} D.2.1 {Requirements/Specification}: {Elicitation Methods
+
+\vspace{1mm}
+\noindent
+{\bf General Terms:} Enter your choices of the 16 terms.
+
+\vspace{1mm}
+\noindent
+{\bf Keywords:} Enter your choices.
+ \end{comment}
+
+\keywords{Firmware, Microcontrollers, Product Design, Design Interactions, Sketching, Boundary Objects}
+
+\category{D.2.1}{Requirements/Specifications}{Elicitation} 
+ 
+\terms{Design, Human Factors, Experimentation
 
 % =============================================================================
 \section{Introduction}
 % =============================================================================
 
-An inclusive definition of design, offered by Feng and Feenberg [], is "a process of consciously shaping an artifact to adapt it to specific goals and environments". 
+A broad, inclusive definition of design, offered by Feng and Feenberg [], is "a process of consciously shaping an artifact to adapt it to specific goals and environments". 
 
-However, not all shaping practices adopt the same world-view. Some are close to a scientific method, where choices are \emph{discovered}, deducing them from facts. For example,  a material's physical properties can eliminate it from consideration, or experiments can recommend employing a particular approach over an alternative. Other practices map a space of solutions from which the preferred one will be \emph{decided} based on an explicit or implicit scheme of values and preferences []. 
+However, not all shaping practices adopt a designerly world-view []. Some are close to a scientific method, where choices are \emph{discovered}, deducing them from facts. For example,  a material's physical properties can eliminate it from consideration, or experiments can recommend employing a particular approach over an alternative. Other practices map a space of solutions on many dimensions of assessment, so a configuration can be \emph{decided} based on an explicit or implicit scheme of values and preferences [].
 
-So, is designing just discovering or decision-making? In this paper, we employ an exclusive definition of design, where the phrase \emph{designed} is reserved for preferences which are arrived at through reflective processes [Schon], where preferences are neither \emph{discovered} through evidence gathering, nor \emph{decided} through systematic analysis of a space of configurations. Instead, a designer engages in a "conversation with materials" [Schon], an operating principle captured well by Ozenc et al's [] phrase, that "the materials [designers] use begin to 'talk back'" [Ozenc et al].
+\marginpar{
+\begin{figure}
+  \begin{center}
+  \includegraphics[width=\marginparwidth]{disciplines.jpg}
+  \caption{Configuration Choice}
+  \label{fig:marginparsample}
+  \end{center}  
+\end{figure}
+}
 
-Our position resonates strongly with Fallman's [], that sketching is "the archetypal activity of the design approach". However, if no candidate practices exist to parallel \emph{sketching} when selecting behaviours for a digitally controlled product, and reflective techniques are central to value-creation in all design disciplines, we may ask whether product firmware is in fact designed at all?
+So, is designing the same as discovering and decision-making? In this paper, we employ an exclusive definition of design, following Fallman[] and Louridas[], where the phrase \emph{designed} is reserved for preferences which are arrived at through reflective processes [Schon]. \emph{Designed} preferences are neither \emph{discovered} through evidence gathering, nor \emph{decided} through systematic analysis of a space of configurations. Instead, a designer engages in a "conversation with materials" [Schon], a dynamic process in which "the materials [designers] use begin to 'talk back'". [Ozenc et al]
 
-We characterise how sketching is employed in other design disciplines, and outline a number of reasons why these approaches cannot be trivially transferred to firmware engineering. We then propose a number of candidates for reflective materials which may be used in firmware design, and articulate the value they could bring.  
+Our position resonates strongly with Fallman's [], that sketching is "the archetypal activity of the design approach". If there are no candidate practices within firmware engineering which parallel \emph{sketching}, and if reflective techniques are central to value-creation in all design disciplines, we may ask whether product firmware is in fact designed at all?
 
-
-[Brock and Craft
-
-
-
-
-
- such as sketching 
-
-[Brock and Craft] and bricolage [Levi-Strauss], building on design theorist's claims that  [Fallman] and that "design in all its guises is a form of bricolage"[Louridas].
-
-
-
-Co-design or design briefing
-
-Architecture, blueprints and patterns.
+In this paper We explore candidate materials to support reflective design within firmare engineering, considering approaches used within the field and comparing them to those from established design disciplines. We offer reasons why familiar approaches cannot be trivially transferred to firmware engineering. We then propose a number of candidates for reflective materials which may be used effectively in firmware design and describe a programme of experimentation to discover how those tools and approaches may sustain the co-design of product firmware.
 
 % =============================================================================
-\section{Sketches and Blueprints}
+\section{Firmware Design and Critiques}
 % =============================================================================
-Informal and formal drawings are in use throughout the design process in fashion, architecture and product design, but no analog seems to exist for interactive behaviours. Sketches and blueprints of physical designs capture implementation commitments, guiding and constraining a specialist production process. However, they also stimulate and facilitate engagement with others without demanding they themselves have the skills to materialise the design. By contrast, in a firmware design process, the3 representations which characterise implementation commitments for code are accessible principally to programmers - those skilled in materialising digital behaviours - and can not effectively catalyse knowledge exchange with others. By excluding key stakeholders until working systems are ready to be tested, this restricts the design contributions they can make, and limits the potential for design thinking. In this paper, we explore behaviour blueprints as a design fiction and a rhetorical object. We outline the preferred features by analogy with effective tools from other disciplines, and we detail a program of future co-design experimentation which we hope will allow us to explore and validate candidate representations.
+
+Reports on established practice suggests the early phases of behaviour design for digitally-controlled products are centred on representations primarily accessible to programmers [Petre 2013]. Development begins with a software requirements document, and proceeds through software modelling constructs and program code until a single prototype implementation can be deployed [Ganssle 2000]. During these phases many choices are made which will impact on the interaction design embodied by the product. However, it is only after a working prototype is deployed that feedback is anticipated from end-users on the behaviour design choices already made [Punkka 2005, van der Helm 2008].
+
+
+% =============================================================================
+\section{Sketching, Ideation, Reflection, Archiving  }
+% =============================================================================
+
+In this paper, we explore behaviour blueprints as a design fiction and a rhetorical object. We outline the preferred features by analogy with effective tools from other disciplines, and we detail a program of future co-design experimentation which we hope will allow us to explore and validate candidate representations.
+
+Van der Lugt [] observes how central ideation, reflection, storage, 
+
+Many participants in a physical design process lack the skills needed to actually materialise the product. Nevertheless, sketches, blueprints and models can serve to catalyse knowledge exchange between a wide range of stakeholders, helping to integrate clients' experience of the market and users' experience of the domain from a very early stage in the design process of a physical product.
+
+
+% =============================================================================
+\section{Blueprints, Patterns, Collaboration and Co-design}
+% =============================================================================
+
+Blueprints of physical designs capture implementation commitments, guiding and constraining a specialist production process. However, they also stimulate and facilitate engagement with others without demanding they themselves have the skills to materialise the design. By contrast, in a firmware design process, the representations which characterise implementation commitments for code are accessible principally to programmers - those skilled in materialising digital behaviours - and can not effectively catalyse knowledge exchange with others. By excluding key stakeholders until working systems are ready to be tested, this restricts the design contributions they can make, and limits the potential for design thinking. 
+
+Blueprints delivery downstream
+
+Multiplicity and Engagement
+
+Patterns engagement upstream
+
+% =============================================================================
+\section{Boundary Objects and Bricolage}
+% =============================================================================
+
+ and bricolage [Levi-Strauss], building on design theorist's claims that  [Fallman] and that "design in all its guises is a form of bricolage"[Louridas].
+
+
+% =============================================================================
+\section{Wizard of Oz and Visual Programming}
+% =============================================================================
 
 \marginpar{
 \begin{figure}
@@ -153,22 +203,11 @@ Informal and formal drawings are in use throughout the design process in fashion
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{scratch.png}
-  \caption{Scratch Programming}
+  \caption{Program in Scratch}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
 }
-
-Van der Lugt [] observes how central ideation, reflection, storage, 
-
-Many participants in a physical design process lack the skills needed to actually materialise the product. Nevertheless, sketches, blueprints and models can serve to catalyse knowledge exchange between a wide range of stakeholders, helping to integrate clients' experience of the market and users' experience of the domain from a very early stage in the design process of a physical product.
-
-% =============================================================================
-\section{Boundary Objects and Bricolage}
-% =============================================================================
-Please use an 8.5-point Verdana font, or other sans serifs font as close as possible in appearance to Verdana in {Use footnotes sparingly, if at all.}
-As stated in the footnote, footnotes should rarely be used.
-
 
 \begin{comment}
 \begin{figure}
@@ -187,7 +226,7 @@ Critiques levelled at mainstream interaction design suggest that practice should
 
 \section{Acknowledgements}
 NYU Dead Media Archive [Blueprint image]
-Creative Commons imagery [Flickr accounts]
+Creative Commons imagery [Flickr accounts clagnut,]
 SarahMumOf3 for Xmas Light controller
 
 
